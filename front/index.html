@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="avaliador">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="avaliador/app.js"></script>
+    <script src="avaliador/service/avaliadorService.js"></script>
+    <script src="avaliador/controller/avaliadorController.js"></script>
+</head>
+<body>
+    <div ng-controller="avaliadorController">
+        <label>Avaliador de senha</label><br>
+        <input type="text" ng-model="senha.senha" ng-change="avaliar(senha)" placeholder="Favor inserir a senha"></intput><br>
+        <label class="fg-label" ng-model="senha.nota"></label>
+        <label class="fg-label" ng-model="senha.complexidade"></label>
+    </div>
+</body>
+</html>
