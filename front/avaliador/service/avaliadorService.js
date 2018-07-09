@@ -16,6 +16,7 @@ avaliador
         cors.onerror = function() {
         alert('Woops, there was an error making the request.');
         };
+        console.log(senha)
         cors.send(senha)
     }
     var _testeHttp = function(){

@@ -3,11 +3,9 @@ avaliador
     $scope.senha = {
         senha: '',
         nota: 0,
-        complexidade: ''
+        complexidade:''
     }
-
     $scope.avaliar = function(senha){
         $scope.senha = avaliadorService.avaliar(senha)
     }
-        }   
-])
+}])
