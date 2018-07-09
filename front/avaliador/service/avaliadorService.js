@@ -3,20 +3,20 @@ avaliador
     var url = "http://localhost:8080/"
 
     var _avaliar = function(senha){
-        cors = createCORSRequest('GET', url)
+        cors = createCORSRequest('POST', url+"avaliar")
         if (!cors) {
             alert('CORS not supported')
             return;
           }
         cors.onload = function() {
-            var text = xhr.responseText;
-            var title = getTitle(text);
+            var text = cors.responseText;
+            var title = text
             alert('Response from CORS request to ' + url + ': ' + title);
           };
         cors.onerror = function() {
         alert('Woops, there was an error making the request.');
         };
-        cors.send()
+        cors.send(senha)
         /*
         $http.get(url+"/avaliar", senha)
         .then(function(data){
