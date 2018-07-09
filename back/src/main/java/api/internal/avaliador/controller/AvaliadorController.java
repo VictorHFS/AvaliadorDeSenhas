@@ -17,10 +17,12 @@ public class AvaliadorController {
     @GetMapping("/")
     public String index(){return "Bem vindo ao avaliado de senhas.";}
 
-    @CrossOrigin(origins = "http://localhost:8081")
+    @CrossOrigin(origins = "http://localhost:1994   ")
     @PostMapping("/avaliar")
-    @ResponseBody
-    public Senha avaliarSenha(@RequestParam String senha, @RequestParam Integer nota, @RequestParam String complexidade){
+    public @ResponseBody Senha avaliarSenha(HttpServletRequest request){
+        String senha = String.valueOf(request.getAttribute("senha"));
+        String nota = String.valueOf(request.getAttribute("nota"));
+        String complexidade = String.valueOf(request.getAttribute("complexidade"));
         SenhaCommand command = new SenhaCommand(senha, String.valueOf(nota), complexidade);
         Senha resultado = service.avaliarSenha(command);
         return resultado;

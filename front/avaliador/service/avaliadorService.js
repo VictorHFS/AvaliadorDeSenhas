@@ -17,17 +17,6 @@ avaliador
         alert('Woops, there was an error making the request.');
         };
         cors.send(senha)
-        /*
-        $http.get(url+"/avaliar", senha)
-        .then(function(data){
-            console.log('Senha enviada com sucesso')
-            console.log(data)
-            return data;
-        },
-        function(error){
-            console.log('Ocorreu um erro ao enviar a senha:')
-            console.log(error)
-        })*/
     }
     var _testeHttp = function(){
         $http.get(url+"/")
