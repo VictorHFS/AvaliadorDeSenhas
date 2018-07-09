@@ -12,7 +12,7 @@ public class NumerosOuSimbolosNoMeio implements CriterioDeAdicao {
         List<String> caracteres = Arrays
                 .asList(senha.getSenha().split("(?!^)"));
         if(caracteres.size()<3)
-            throw new Exception("Menos de 3 caracteres.");
+            return;
         List<String> caracteresDoMeio = caracteres
                 .subList(1, senha.getSenha().length()-1);
 

@@ -1,9 +1,7 @@
 package api.internal.avaliador.model.senha;
 
-
 public class Senha {
-
-    private final String senha;
+    private String senha;
     private Integer nota;
     private String complexidade;
 
@@ -12,16 +10,24 @@ public class Senha {
         this.nota = 0;
     }
 
+    public void adicionar(Integer valor) {
+        this.nota += valor;
+    }
+
     public String getSenha() {
         return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public Integer getNota() {
         return nota;
     }
 
-    public void adicionar(Integer valor) {
-        this.nota += valor;
+    public void setNota(Integer nota) {
+        this.nota = nota;
     }
 
     public String getComplexidade() {
